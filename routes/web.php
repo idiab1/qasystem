@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,36 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// -->> Route for authantication
 Auth::routes();
 
+// -->> Route for home
 Route::get('/home', 'HomeController@index')->name('home');
+
+// -->> Route resource for posts
+Route::resource('posts', "PostController")->parameters([
+    "posts" => 'post'
+])->names([
+    'index' => 'posts.index',
+    'create' => 'post.create',
+    'store' => 'post.store',
+    'show' => 'post.show',
+    'edit' => 'post.edit',
+    'update' => 'post.update',
+    'destroy' => 'post.destroy',
+]);
+
+// -->> Route resource for comments
+Route::resource('comments', "PostController")->except([
+    'show',
+
+])->parameters([
+    "comments" => 'comment'
+])->names([
+    'index' => 'comments.index',
+    'create' => 'comment.create',
+    'store' => 'comment.store',
+    'edit' => 'comment.edit',
+    'update' => 'comment.update',
+    'destroy' => 'comment.destroy',
+]);
