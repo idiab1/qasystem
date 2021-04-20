@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', 'Unknown Page') - Q & A System</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,14 +18,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Other styles -->
+    @yield('styles')
 </head>
 <body>
     <div id="app">
 
-
-        <main class="py-4">
-            @yield('content')
+        <!-- Include Navbar -->
+        @include('layouts.navbar')
+        
+        <main class="main-content py-4">
+            <div class="container">
+                @yield('content')
+            </div>
         </main>
     </div>
+    <!-- Other Scripts-->
+    @yield('scripts')
 </body>
 </html>
