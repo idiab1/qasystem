@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/fontawsome.all.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Other styles -->
     @yield('styles')
@@ -26,7 +27,7 @@
 
         <!-- Include Navbar -->
         @include('layouts.navbar')
-        
+
         <main class="main-content py-4">
             <div class="container">
                 @yield('content')
