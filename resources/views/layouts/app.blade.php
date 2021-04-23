@@ -28,11 +28,16 @@
         <!-- Include Navbar -->
         @include('layouts.navbar')
 
+        <!-- Main Content -->
         <main class="main-content py-4">
             <div class="container">
                 @yield('content')
             </div>
         </main>
+
+        <!-- Include Navbar -->
+        @include('layouts.footer')
+
     </div>
     <!-- Other Scripts-->
     @yield('scripts')
