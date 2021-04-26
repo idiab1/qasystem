@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Post extends Model
 {
     use softDeletes;
-    protected $dates=['deleted_at'];
+    protected $dates = ['deleted_at'];
     protected $fillable = [
-        'user_id', 'title', 'description'
+        'user_id', 'title', 'description', 'image'
     ];
     /**
      * Get all of the comments for the Post
