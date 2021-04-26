@@ -28,6 +28,9 @@
         <!-- Include Navbar -->
         @include('layouts.navbar')
 
+        <!-- Include Navbar -->
+        @include('layouts.breadcrumb')
+
         <!-- Main Content -->
         <main class="main-content py-4">
             <div class="container">
