@@ -15,7 +15,7 @@
                     <a class="nav-link" href="">{{ __('Browse Questions') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Our Blog') }}</a>
+                    <a class="nav-link" href="{{route('posts.index')}}">{{ __('Our Blog') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">{{ __('Contact Us') }}</a>
