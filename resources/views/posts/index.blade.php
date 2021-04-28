@@ -30,7 +30,11 @@
                     <div class="card-body post-body">
                         <div class="row">
                             <div class="col-md-9">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">{{$post->title}}</h5>
+                                <ul class="list-unstyled">
+                                    <li class="item">{{$post->user->name}} | </li>
+                                    <li class="item"><i class="fas fa-globe"></i> {{$post->created_at->diffForhumans()}}</li>
+                                </ul>
                             </div>
                             <div class="col-md-3">
                                 <div class="dropdown">
@@ -38,7 +42,7 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="{{route('post.show', ['post' => $post->id])}}">View</a>
+                                        <a class="dropdown-item" href="{{route('post.show', ['post' => $post->slug])}}">View</a>
                                         <a class="dropdown-item" href="{{route('post.edit', ['post' => $post->id])}}">Edit</a>
                                         <a class="dropdown-item" href="#">Archive</a>
                                         <form action="{{route('post.destroy', ['post' => $post->id])}}" method="POST">
@@ -62,7 +66,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a href="{{route("post.show", ['post' => $post->id])}}" class="btn btn-gray">
+                                <a href="{{route("post.show", ['post' => $post->slug])}}" class="btn btn-gray">
                                     <i class="fas fa-arrow-right"></i>
                                     <span>More</span>
                                 </a>
