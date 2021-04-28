@@ -108,22 +108,31 @@ class PostController extends Controller
         $post = Post::find($id);
 
         $request->validate([
-            'title' => 'required|60',
+            'title' => 'required|max:60',
             'description' => 'required',
+            'image' => 'nullable|image',
         ]);
+
+        // dd($request->all());
+
         if ($request->has('image')) {
+
             $image = $request->image;
             // newimage for generate new name when storage
             $newImage = time() . $image->getClientOriginalName();
             // Move to upload folder in public asset
-            $image->move('upload/posts/', $newImage);
+            $image->move('upload/posts', $newImage);
+
             $post->image = 'upload/posts/' . $newImage;
         }
 
         $post->title = $request->title;
         $post->description = $request->description;
+
         $post->save();
-        return redirect()->back();
+
+
+        return redirect()->back()->with('status', 'Updated success');
     }
 
     /**
