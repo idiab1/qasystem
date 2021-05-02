@@ -37,7 +37,7 @@ Route::resource('posts', "PostController")->parameters([
 ]);
 
 // -->> Route resource for comments
-Route::resource('comments', "PostController")->except([
+Route::resource('comments', "CommentController")->except([
     'show',
 
 ])->parameters([
