@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Comment extends Model
 {
     use softDeletes;
-    protected $dates=['deleted_at'];
+    protected $dates = ['deleted_at'];
     protected $fillable = [
-        'user_id', 'title', 'description'
+        'user_id', 'post_id', 'parent_id', 'description'
     ];
     /**
      * Get the user that owns the Comment
@@ -30,5 +30,4 @@ class Comment extends Model
     {
         return $this->hasMany('App\Comment', 'parent_id');
     }
-
 }
