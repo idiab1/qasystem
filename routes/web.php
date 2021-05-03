@@ -50,3 +50,7 @@ Route::resource('comments', "CommentController")->except([
     'update' => 'comment.update',
     'destroy' => 'comment.destroy',
 ]);
+
+// -->> Contact us route
+// -> index for get form for contat us
+Route::get('contact', 'ContactController@index')->name('contact');
