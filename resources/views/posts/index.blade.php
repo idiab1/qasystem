@@ -62,7 +62,7 @@
                             <div class="col-md-9">
                                 <a href="">
                                     <i class="fas fa-comments"></i>
-                                    <span>5</span>
+                                    <span>{{$countComment}}</span>
                                 </a>
                             </div>
                             <div class="col-md-3">
