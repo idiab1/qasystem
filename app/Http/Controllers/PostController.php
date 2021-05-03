@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -16,8 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        $countComment = Comment::all()->count();
         $posts = Post::all();
-        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts', 'countComment'));
     }
 
     /**
