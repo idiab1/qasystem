@@ -9,7 +9,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Home') }}</a>
+                    <a class="nav-link" href="{{route('home')}}">{{ __('Home') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">{{ __('Browse Questions') }}</a>
@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{route('posts.index')}}">{{ __('Our Blog') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">{{ __('Contact Us') }}</a>
+                    <a class="nav-link" href="{{route('contact')}}">{{ __('Contact Us') }}</a>
                 </li>
 
                 <form class="form-inline my-lg-0">
