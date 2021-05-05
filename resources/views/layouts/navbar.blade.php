@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{route('posts.index')}}">{{ __('Our Blog') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact')}}">{{ __('Contact Us') }}</a>
+                    <a class="nav-link" href="{{route('contacts.index')}}">{{ __('Contact Us') }}</a>
                 </li>
 
                 <form class="form-inline my-lg-0">
