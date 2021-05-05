@@ -70,7 +70,7 @@ class PostController extends Controller
         $post->save();
 
 
-        return redirect()->back()->with('status', 'Created new post');
+        return redirect()->back()->with('success', 'Created new post');
     }
 
     /**
@@ -134,7 +134,7 @@ class PostController extends Controller
         $post->save();
 
 
-        return redirect()->back()->with('status', 'Updated success');
+        return redirect()->back()->with('success', 'Updated success');
     }
 
     /**
