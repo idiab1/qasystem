@@ -53,4 +53,17 @@ Route::resource('comments', "CommentController")->except([
 
 // -->> Contact us route
 // -> index for get form for contat us
-Route::get('contact', 'ContactController@index')->name('contact');
+// Route::get('contact', 'ContactController@index')->name('contact');
+// -->>
+// Route::get('contact', 'ContactController@index')->name('contact');
+
+// -->> Route resource for comments
+Route::resource('contacts', "ContactController")->only([
+    'index', 'store'
+
+])->parameters([
+    "contacts" => 'contact'
+])->names([
+    'index' => 'contacts.index',
+    'store' => 'contact.store',
+]);
