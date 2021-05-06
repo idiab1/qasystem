@@ -46,7 +46,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <!-- Logout route -->
-                            <a class="dropdown-item" href="{{ route('logout') }}">
+                            <a class="dropdown-item" href="{{ route('profile.index') }}">
                                 <i class="fas fa-cogs"></i> {{ __('Profile Setting') }}
                             </a>
                             <!-- Logout route -->
