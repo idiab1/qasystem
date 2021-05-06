@@ -51,13 +51,7 @@ Route::resource('comments', "CommentController")->except([
     'destroy' => 'comment.destroy',
 ]);
 
-// -->> Contact us route
-// -> index for get form for contat us
-// Route::get('contact', 'ContactController@index')->name('contact');
-// -->>
-// Route::get('contact', 'ContactController@index')->name('contact');
-
-// -->> Route resource for comments
+// -->> Route resource for Contact us
 Route::resource('contacts', "ContactController")->only([
     'index', 'store'
 
@@ -66,4 +60,14 @@ Route::resource('contacts', "ContactController")->only([
 ])->names([
     'index' => 'contacts.index',
     'store' => 'contact.store',
+]);
+
+// -->> Route resource for profile user
+Route::resource('profile', 'ProfileController')->only([
+    'index', 'update'
+])->parameters([
+    'profile' => 'profile'
+])->names([
+    'index' => 'profile.index',
+    'update' => 'profile.update'
 ]);
