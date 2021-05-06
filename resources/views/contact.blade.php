@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description / Your Opinion</label>
-                        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn " type="submit">Send</button>
