@@ -45,7 +45,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <!-- Logout route -->
+                            <!-- Dashoard route -->
+                            <a class="dropdown-item" href="{{ route('dashboard.index') }}">
+                                <i class="fas fa-tachometer-alt"></i> {{ __('Dashboard') }}
+                            </a>
+                            <!-- Profile Setting route -->
                             <a class="dropdown-item" href="{{ route('profile.setting') }}">
                                 <i class="fas fa-cogs"></i> {{ __('Profile Setting') }}
                             </a>
