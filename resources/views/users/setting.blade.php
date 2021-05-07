@@ -73,8 +73,8 @@
 
                     {{-- Bio --}}
                     <div class="form-group">
-                        <label for="description">Bio</label>
-                        <textarea class="form-control" name="description" id="description" cols="30" rows="10">{{$user->profile->bio}}</textarea>
+                        <label for="bio">Bio</label>
+                        <textarea class="form-control" name="bio" id="bio" cols="30" rows="10">{{$user->profile->bio}}</textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn " type="submit">Send</button>
