@@ -19,8 +19,8 @@ class CreateProfilesTable extends Migration
             $table->string('gender')->nullable();
             $table->string('address')->nullable();
             $table->text('bio')->nullable();
-            $table->text('facebook_url')->nullable();
-            $table->text('linkedin_url')->nullable();
+            $table->string('facebook_url')->nullable();
+            $table->string('linkedin_url')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
