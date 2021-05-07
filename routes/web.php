@@ -71,3 +71,6 @@ Route::resource('profile', 'ProfileController')->only([
     'index' => 'profile.index',
     'update' => 'profile.update'
 ]);
+
+// -->> Setting Route for get profile setting page
+Route::get('setting', 'ProfileController@setting')->name('profile.setting');
