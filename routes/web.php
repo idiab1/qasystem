@@ -68,7 +68,7 @@ Route::resource('profile', 'ProfileController')->only([
 ])->parameters([
     'profile' => 'profile'
 ])->names([
-    'index' => 'profile.index',
+    'index' => 'dashboard.index',
     'update' => 'profile.update'
 ]);
 
