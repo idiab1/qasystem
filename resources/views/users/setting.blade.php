@@ -68,7 +68,7 @@
                     {{-- Linkedin URL --}}
                     <div class="form-group">
                         <label for="linkedin_url">Linkedin URL</label>
-                        <input class="form-control" id="linkedin_url" type="text" name="linkedin_url" value="{{$user->profile->facebook_url}}" placeholder="Type Your Linkedin URL">
+                        <input class="form-control" id="linkedin_url" type="text" name="linkedin_url" value="{{$user->profile->linkedin_url}}" placeholder="Type Your Linkedin URL">
                     </div>
 
                     {{-- Bio --}}
