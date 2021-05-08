@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-8 m-auto">
             <div class="profile-form">
-                <form action="{{route('profile.update', ['profile', $user->id])}}" method="POST">
+                <form action="{{route('profile.update', $user->id)}}" method="POST">
                     @csrf
                     @method('PUT')
                     {{-- Name --}}
