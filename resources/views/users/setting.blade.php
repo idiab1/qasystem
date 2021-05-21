@@ -43,12 +43,12 @@
                     {{-- Password --}}
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input class="form-control" id="password" type="password" name="password" value="{{$user->password}}" placeholder="Type Your Password">
+                        <input class="form-control" id="password" type="password" name="password" placeholder="Type Your Password">
                     </div>
                     {{-- Confirm Password --}}
                     <div class="form-group">
                         <label for="confirm_password">Confirm Password</label>
-                        <input class="form-control" id="confirm_password" type="password" name="password" value="{{$user->password}}" placeholder="Confirm Your Password">
+                        <input class="form-control" id="confirm_password" type="password" name="password" placeholder="Confirm Your Password">
                     </div>
                     {{-- Gender --}}
                     <div class="form-group">
