@@ -49,6 +49,8 @@ class ProfileController extends Controller
      */
     public function update(Request $request)
     {
+        // dd($request);
+        // dd($request->password);
         // Validate data
         $request->validate([
             'name' => 'required|min:4|max:40',
@@ -73,7 +75,7 @@ class ProfileController extends Controller
         // Save in profile table
         $user->profile->save();
         // if request has a password
-        if ($request->has('password')) {
+        if ($request->has('password') && $request->password != null) {
             $user->password = Hash::make($request->password);
             $user->save();
         }
